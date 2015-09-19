@@ -26,15 +26,15 @@
 						<div class="card card-block text-center no-border">
 							<a href="#getting-started">
 								<i class="fa fa-5x fa-rocket p-b"></i>
-								<h4 class="card-title">Kom igang</h4>
-								<p class="card-text">Find ud af hvor kaldene skal hen</p>
+								<h4 class="card-title">Getting started</h4>
+								<p class="card-text">To authenticate or not to authenticate, that is the question.</p>
 							</a>
 						</div>
 						<div class="card card-block text-center no-border">
 							<a href="#examples">
 								<i class="fa fa-5x fa-code p-b"></i>
-								<h4 class="card-title">Eksempler</h4>
-								<p class="card-text">Tag et kig på nogle af eksemplerne</p>
+								<h4 class="card-title">Examples</h4>
+								<p class="card-text">Take a look at our simple examples.</p>
 							</a>
 						</div>
 					</div>
@@ -47,30 +47,30 @@
 
 			<div class="row">
 				<div class="col-sm-10">
-					<h1 id="getting-started">Kom igang</h1>
+					<h1 id="getting-started">Getting started</h1>
 
 					<div class="alert alert-warning" role="alert">
-					Du er ikke tvunget til at bruge en nøgle for at bruge CVR API, men det anbefales at gøre det, fordi du ellers vil risikere at blive begrænset.
+						You do not need to obtain an token to use CVR API, however it is recommended to do so, since you more easily will be throttled.
 					</div>
 
 					<p>
-						CVR API er bygget op omkring <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST principperne</a> hvilket betyder, at du skal bruge GET for at hente objekter.
-						Du vil derudover også få leveret en sigende HTTP statuskode retur, som f.eks. fortæller om et objekt blev fundet eller ej.
+						CVR API are build upon the <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST principles</a> which means to GET objects, you need to make a GET-request.
+						Furthermore the API will produce a meaningful HTTP response code whether an object was found or not.
 					</p>
 
 					<br /><br />
 
 
 
-					<h2 id="api-endpoint">API adresse</h2>
+					<h2 id="api-endpoint">API endpoint</h2>
 					<p>
-						CVR API kører kun med én adresse:
+						CVR API only operate with one endpoint:
 					</p>
 
 					<h4>
 						<a href="http://rest.cvrapi.dk" target="_blank">
 							<span class="label label-primary">http://rest.cvrapi.dk/</span>
-						</a> eller <a href="https://rest.cvrapi.dk" target="_blank">
+						</a> or <a href="https://rest.cvrapi.dk" target="_blank">
 							<span class="label label-primary">https://rest.cvrapi.dk/</span>
 						</a>
 					</h4>
@@ -79,19 +79,19 @@
 
 
 
-					<h2 id="authentication">Bruger</h2>
+					<h2 id="authentication">Authentication</h2>
 					<p>
-						Som tidligere nævnt, så er det ikke et krav at du bruger en nøgle for at bruge API'et, men du kan risikere at blive begrænset. For at minimere begrænsning, kan du verificere dig via HTTP basic.
+						As previously mentioned it is not a requirement to authenticate to use the API, but you may be subject to throttling. To circumvent throttling you can authenticate via HTTP basic.
 
 						<code>
-							curl http://rest.cvrapi.dk -u 'nøgle':
+							curl http://rest.cvrapi.dk -u 'token':
 						</code>
 					</p>
 
 					<br />
 
 					<p>
-						Hvis du af en årsag ikke bruger en valid nøgle, så vil du modtage følgende svar:
+						If you for some reason should provide an invalid token the response will be:
 
 						<code>
 							HTTP/1.1 401 Not Authorized
@@ -102,9 +102,9 @@
 
 
 
-					<h2 id="response-format">Svarformat</h2>
+					<h2 id="response-format">Response format</h2>
 					<p>
-						Alle svar vil være i JSON. I øjeblikket udbyder CVR API ikke et XML API.
+						All responses will be delivered in JSON. At the moment CVR API do not utilize an XML API.
 
 						<code>
 							Content-Type: application/json
@@ -118,7 +118,7 @@
 					<br />
 
 					<p>
-						API'et vil returnere en af følgende HTTP statuskoder, som du kan handle efter:
+						The API will return an HTTP response code you can act on.
 
 						<code>
 							200   OK
@@ -139,24 +139,24 @@
 
 				<div class="col-sm-2 hidden-sm-down follow-scroll">
 					<ul class="nav">
-						<li>DA | <a href="/en/">EN</a></li>
+						<li><a href="/">DA</a> | EN</li>
 					</ul>
 					<br />
 					<ul class="nav">
-						<li><a href="#getting-started"><strong>Kom igang</strong></a></li>
-						<li><a href="#api-endpoint">API adresse</a></li>
-						<li><a href="#authentication">Bruger</a></li>
-						<li><a href="#response-format">Svarformat</a></li>
+						<li><a href="#getting-started"><strong>Getting started</strong></a></li>
+						<li><a href="#api-endpoint">API endpoint</a></li>
+						<li><a href="#authentication">Authentication</a></li>
+						<li><a href="#response-format">Response format</a></li>
 					</ul>
 					<br />
 					<ul class="nav">
-						<li><a href="#examples"><strong>Eksempler</strong></a></li>
-						<li><a href="#retrieve-company-example">Hent virksomhed</a></li>
-						<li><a href="#retrieve-subsidiary-example">Hent underenhed</a></li>
-						<li><a href="#retrieve-participant-example">Hent deltager</a></li>
-						<li><a href="#suggest-company-example">Foreslå virksomhed</a></li>
-						<li><a href="#suggest-subsidiary-example">Foreslå underenhed</a></li>
-						<li><a href="#suggest-participant-example">Foreslå deltager</a></li>
+						<li><a href="#examples"><strong>Examples</strong></a></li>
+						<li><a href="#retrieve-company-example">Retrieve company</a></li>
+						<li><a href="#retrieve-subsidiary-example">Retrieve subsidiary</a></li>
+						<li><a href="#retrieve-participant-example">Retrieve participant</a></li>
+						<li><a href="#suggest-company-example">Suggest companies</a></li>
+						<li><a href="#suggest-subsidiary-example">Suggest subsidiaries</a></li>
+						<li><a href="#suggest-participant-example">Suggest participants</a></li>
 					</ul>
 				</div>
 			</div>
@@ -167,21 +167,21 @@
 
 			<div class="row">
 				<div class="col-sm-10">
-					<h1 id="examples">Eksempler</h1>
+					<h1 id="examples">Examples</h1>
 
 					<br />
 
 					<div id="retrieve-company-example">
-						<h2>Hent virksomhed</h2>
+						<h2>Retrive company</h2>
 						<p>
-							Du kan hente et virksomhedsobjekt via et simpelt HTTP GET:
+							You can retrieve a company object via a simple HTTP GET:
 
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Skriv CVR-nummer f.eks. 10150817" value="10150817">
+										<input type="text" class="form-control" placeholder="Input VAT fx. 10150817" value="10150817">
 										<span class="input-group-btn">
-											<button class="btn btn-primary" type="button">Søg</button>
+											<button class="btn btn-primary" type="button">Search!</button>
 										</span>
 									</div>
 								</div>
@@ -195,7 +195,7 @@
 						<br />
 
 						<p>
-							Svar eksempel:
+							Example response:
 							<pre><code></code></pre>
 						</p>
 					</div>
@@ -205,16 +205,16 @@
 
 
 					<div id="retrieve-subsidiary-example">
-						<h2>Hent underenhed</h2>
+						<h2>Retrive subsidiary</h2>
 						<p>
-							Du kan hente et underenhedsobjekt via et simpelt HTTP GET:
+							You can retrieve a subsidiary object via a simple HTTP GET:
 
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Skriv P-nummer f.eks. 1003407806" value="1003407806">
+										<input type="text" class="form-control" placeholder="Input subsidiary number fx. 1003407806" value="1003407806">
 										<span class="input-group-btn">
-											<button class="btn btn-primary" type="button">Søg</button>
+											<button class="btn btn-primary" type="button">Search!</button>
 										</span>
 									</div>
 								</div>
@@ -228,7 +228,7 @@
 						<br />
 
 						<p>
-							Svar eksempel:
+							Example response:
 							<pre><code></code></pre>
 						</p>
 					</div>
@@ -238,16 +238,16 @@
 
 
 					<div id="retrieve-participant-example">
-						<h2>Hent deltager</h2>
+						<h2>Retrive participant</h2>
 						<p>
-							Du kan hente et deltagerobjekt via et simpelt HTTP GET:
+							You can retrieve a participant object via a simple HTTP GET:
 
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Skriv deltagernummer f.eks. 4004213460" value="4004213460">
+										<input type="text" class="form-control" placeholder="Input participant number fx. 4004213460" value="4004213460">
 										<span class="input-group-btn">
-											<button class="btn btn-primary" type="button">Søg</button>
+											<button class="btn btn-primary" type="button">Search!</button>
 										</span>
 									</div>
 								</div>
@@ -261,7 +261,7 @@
 						<br />
 
 						<p>
-							Svar eksempel:
+							Example response:
 							<pre><code></code></pre>
 						</p>
 					</div>
@@ -271,16 +271,16 @@
 
 
 					<div id="suggest-company-example">
-						<h2>Foreslå virksomhed</h2>
+						<h2>Suggest companies</h2>
 						<p>
-							Du kan få returneret en liste med foreslag på virksomhedsobjekter via et simpelt HTTP GET:
+							You can retrieve a list of suggestions for company objects via a simple HTTP GET:
 
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Skriv virksomhedsnavn eller CVR-nummer f.eks. Erhvervsstyrelsen eller 10150817" value="Erhvervsstyrelsen">
+										<input type="text" class="form-control" placeholder="Input company name or VAT fx. Erhvervsstyrelsen or 10150817" value="Erhvervsstyrelsen">
 										<span class="input-group-btn">
-											<button class="btn btn-primary" type="button">Søg!</button>
+											<button class="btn btn-primary" type="button">Search!</button>
 										</span>
 									</div>
 								</div>
@@ -294,7 +294,7 @@
 						<br />
 
 						<p>
-							Svar eksempel:
+							Example response:
 							<pre><code></code></pre>
 						</p>
 					</div>
@@ -304,16 +304,16 @@
 
 
 					<div id="suggest-subsidiary-example">
-						<h2>Foreslå underenhed</h2>
+						<h2>Suggest subsidiaries</h2>
 						<p>
-							Du kan få returneret en liste med foreslag på underenhedsobjekter via et simpelt HTTP GET:
+							You can retrieve a list of suggestions for subsidiary objects via a simple HTTP GET:
 
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Skriv underenheds navn eller P-nummer f.eks. Erhvervsstyrelsen eller 1003407806" value="Erhvervsstyrelsen">
+										<input type="text" class="form-control" placeholder="Input subsidiary name or subsidiary number fx. Erhvervsstyrelsen or 1003407806" value="Erhvervsstyrelsen">
 										<span class="input-group-btn">
-											<button class="btn btn-primary" type="button">Søg!</button>
+											<button class="btn btn-primary" type="button">Search!</button>
 										</span>
 									</div>
 								</div>
@@ -327,7 +327,7 @@
 						<br />
 
 						<p>
-							Svar eksempel:
+							Example response:
 							<pre><code></code></pre>
 						</p>
 					</div>
@@ -337,16 +337,16 @@
 
 
 					<div id="suggest-participant-example">
-						<h2>Foreslå deltager</h2>
+						<h2>Suggest participants</h2>
 						<p>
-							Du kan få returneret en liste med foreslag på deltagerobjekter via et simpelt HTTP GET:
+							You can retrieve a list of suggestions for participant objects via a simple HTTP GET:
 
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="input-group">
-										<input type="text" class="form-control" placeholder="Skriv deltagernavn eller deltagernummer f.eks. DEN DANSKE STAT eller 4004213460" value="DEN DANSKE STAT">
+										<input type="text" class="form-control" placeholder="Input participant name or participant number fx. DEN DANSKE STAT or 4004213460" value="DEN DANSKE STAT">
 										<span class="input-group-btn">
-											<button class="btn btn-primary" type="button">Søg!</button>
+											<button class="btn btn-primary" type="button">Search!</button>
 										</span>
 									</div>
 								</div>
@@ -360,7 +360,7 @@
 						<br />
 
 						<p>
-							Svar eksempel:
+							Example response:
 							<pre><code></code></pre>
 						</p>
 					</div>
