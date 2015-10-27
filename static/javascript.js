@@ -18,8 +18,7 @@ jQuery(document).ready(function()
 
 	jQuery('code').each(function(i, block)
 	{
-		if(i < 4)
-			hljs.highlightBlock(block);
+		hljs.highlightBlock(block);
 	});
 
 
@@ -132,60 +131,6 @@ jQuery(document).ready(function()
 	});
 });
 
-jQuery(document).ready(function()
-{
-	$(window).scroll(function()
-	{
-		if(jQuery("#retrieve-company-example").isOnScreen())
-		{
-			jQuery("#retrieve-company-example code").each(function(i, block)
-			{
-				hljs.highlightBlock(block);
-			})
-		}
-
-		if(jQuery("#retrieve-subsidiary-example").isOnScreen())
-		{
-			jQuery("#retrieve-subsidiary-example code").each(function(i, block)
-			{
-				hljs.highlightBlock(block);
-			})
-		}
-
-		if(jQuery("#retrieve-participant-example").isOnScreen())
-		{
-			jQuery("#retrieve-participant-example code").each(function(i, block)
-			{
-				hljs.highlightBlock(block);
-			})
-		}
-
-		if(jQuery("#suggest-company-example").isOnScreen())
-		{
-			jQuery("#suggest-company-example code").each(function(i, block)
-			{
-				hljs.highlightBlock(block);
-			})
-		}
-
-		if(jQuery("#suggest-subsidiary-example").isOnScreen())
-		{
-			jQuery("#suggest-subsidiary-example code").each(function(i, block)
-			{
-				hljs.highlightBlock(block);
-			})
-		}
-
-		if(jQuery("#suggest-participant-example").isOnScreen())
-		{
-			jQuery("#suggest-participant-example code").each(function(i, block)
-			{
-				hljs.highlightBlock(block);
-			})
-		}
-	});
-});
-
 (function($) {
 	var element = $('.follow-scroll'), originalY = element.offset().top;
 
@@ -205,23 +150,3 @@ jQuery(document).ready(function()
 		}, 100);
 	});
 })(jQuery);
-
-$.fn.isOnScreen = function()
-{
-
-	var win = $(window);
-
-	var viewport = {
-		top : win.scrollTop(),
-		left : win.scrollLeft()
-	};
-	viewport.right = viewport.left + win.width();
-	viewport.bottom = viewport.top + win.height();
-
-	var bounds = this.offset();
-	bounds.right = bounds.left + this.outerWidth();
-	bounds.bottom = bounds.top + this.outerHeight();
-
-	return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-
-};
