@@ -19,7 +19,7 @@ pre { overflow: none!important }
 	background-color: #2C3E50;
 	color: #dbdbdb;
 }
-.jumbotron.examples {
+.jumbotron.examples, .card-block {
 	background-color: #1BBC9B;
 	color: #fff;
 }
