@@ -104,10 +104,20 @@
 
 					<h2 id="response-format">Svarformat</h2>
 					<p>
-						Alle svar vil være i JSON. I øjeblikket udbyder CVR API ikke et XML API.
+						Alle svar vil være i JSON. Du kan vælge og forespørge API'et for at få svaret i XML.
 
 						<code>
-							Content-Type: application/json
+							format=xml
+						</code>
+					</p>
+
+					<br />
+
+					<p>
+						Følgende headers vil være til rådighed.
+
+						<code>
+							Content-Type: [application/json | application/xml]
 							<br />
 							Access-Control-Allow-Origin: *
 							<br />
