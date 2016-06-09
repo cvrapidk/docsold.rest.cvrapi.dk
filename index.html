@@ -173,6 +173,7 @@
 						<li><a href="#suggest-company-example">Foreslå virksomhed</a></li>
 						<li><a href="#suggest-subsidiary-example">Foreslå underenhed</a></li>
 						<li><a href="#suggest-participant-example">Foreslå deltager</a></li>
+						<li><a href="#retrieve-changed-companies-example">Hent opdaterede virksomheder</a></li>
 					</ul>
 				</div>
 			</div>
@@ -370,6 +371,28 @@
 
 							<code>
 								curl http://rest.cvrapi.dk/v1/dk/suggestions/participant/DEN%20DANSKE%20STAT
+							</code>
+						</p>
+
+						<br />
+
+						<p>
+							Svar eksempel:
+							<pre><code></code></pre>
+						</p>
+					</div>
+
+					<br /><br />
+
+
+
+					<div id="retrieve-changed-companies-example">
+						<h2>Hent opdaterede virksomheder</h2>
+						<p>
+							Du kan få leveret en liste over senest ændrede virksomheder, ud fra det tidsstempel du indtaster. Du henter informationen via et simpelt HTTP GET:
+
+							<code>
+								curl http://rest.cvrapi.dk/v1/dk/changed/company/2016-06-09T11:31:00
 							</code>
 						</p>
 
