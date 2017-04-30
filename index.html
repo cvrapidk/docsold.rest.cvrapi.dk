@@ -425,7 +425,7 @@
 					<div id="retrieve-changed-companies-example">
 						<h2>Hent opdaterede virksomheder</h2>
 						<p>
-							Du kan få leveret en liste over senest ændrede virksomheder, ud fra det tidsstempel du indtaster. Du henter informationen via et simpelt HTTP GET:
+							Du kan få leveret en liste over senest ændrede virksomheder, ud fra det tidsstempel du indtaster. Tidstemplet kan maksimalt gå 7 dage bagud i tiden - gælder også klokkeslæt. Du henter informationen via et simpelt HTTP GET:
 
 							<code>
 								curl http://rest.cvrapi.dk/v1/dk/changed/company/2016-06-09T11:31:00

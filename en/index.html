@@ -423,7 +423,7 @@
 					<div id="retrieve-changed-companies-example">
 						<h2>Get last changed companies</h2>
 						<p>
-							You will be supplied with a list of recently changed companies, from the timestamp you enter. You get the information via a simple HTTP GET:
+							You will be supplied with a list of recently changed companies, from the timestamp you enter. The timestamp can not exceed 7 days in the past - also applies to the time. You get the information via a simple HTTP GET:
 
 							<code>
 								curl http://rest.cvrapi.dk/v1/dk/changed/company/2016-06-09T11:31:00
