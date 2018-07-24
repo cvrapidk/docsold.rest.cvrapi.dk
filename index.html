@@ -47,12 +47,6 @@
 
 			<div class="row">
 				<div class="col-sm-10">
-					<a href="http://cvrapi.dk/documentation">
-						<div class="alert alert-info" role="alert">
-							Dette API er endnu ikke udgivet. Venligst se det nuværende API her.
-						</div>
-					</a>
-
 					<h1 id="getting-started">Kom igang</h1>
 
 					<div class="alert alert-warning" role="alert">
@@ -65,6 +59,12 @@
 						Du vil derudover også få returneret en sigende HTTP statuskode, som f.eks. fortæller om et objekt blev fundet eller ej.
 					</p>
 
+					<p>
+						<strong>
+							Dette API er kun for betalende kunder.
+						</strong>
+					</p>
+
 					<br /><br />
 
 
@@ -75,9 +75,7 @@
 					</p>
 
 					<h4>
-						<a href="http://rest.cvrapi.dk" target="_blank">
-							<span class="label label-primary">http://rest.cvrapi.dk/</span>
-						</a> eller <a href="https://rest.cvrapi.dk" target="_blank">
+						<a href="https://rest.cvrapi.dk" target="_blank">
 							<span class="label label-primary">https://rest.cvrapi.dk/</span>
 						</a>
 					</h4>
@@ -91,7 +89,7 @@
 						Som tidligere nævnt, er det ikke et krav at du bruger en nøgle for at bruge API'et, men du kan risikere at blive begrænset. For at minimere begrænsning, kan du verificere dig via HTTP basic.
 
 						<code>
-							curl --user 'nøgle:' http://rest.cvrapi.dk
+							curl --user 'nøgle:' https://rest.cvrapi.dk
 						</code>
 					</p>
 
@@ -211,6 +209,10 @@
 						<li><a href="#retrieve-changed-companies-example">Hent opdaterede virksomheder</a></li>
 						<li><a href="#status-companies-example">Kreditstatus</a></li>
 					</ul>
+					<br />
+					<ul class="nav">
+						<li><a href="/segment"><strong>Segmenterings API</strong></a></li>
+					</ul>
 				</div>
 			</div>
 
@@ -241,7 +243,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/company/10150817
+								curl https://rest.cvrapi.dk/v1/dk/company/10150817
 							</code>
 						</p>
 
@@ -274,7 +276,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/subsidiary/1003407806
+								curl https://rest.cvrapi.dk/v1/dk/subsidiary/1003407806
 							</code>
 						</p>
 
@@ -307,7 +309,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/participant/4004213460
+								curl https://rest.cvrapi.dk/v1/dk/participant/4004213460
 							</code>
 						</p>
 
@@ -340,7 +342,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/suggestions/company/erhvervsstyrelsen
+								curl https://rest.cvrapi.dk/v1/dk/suggestions/company/erhvervsstyrelsen
 							</code>
 						</p>
 
@@ -373,7 +375,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/suggestions/subsidiary/erhvervsstyrelsen
+								curl https://rest.cvrapi.dk/v1/dk/suggestions/subsidiary/erhvervsstyrelsen
 							</code>
 						</p>
 
@@ -406,7 +408,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/suggestions/participant/DEN%20DANSKE%20STAT
+								curl https://rest.cvrapi.dk/v1/dk/suggestions/participant/DEN%20DANSKE%20STAT
 							</code>
 						</p>
 
@@ -428,7 +430,7 @@
 							Du kan få leveret en liste over senest ændrede virksomheder, ud fra det tidsstempel du indtaster. Tidstemplet kan maksimalt gå 7 dage bagud i tiden - gælder også klokkeslæt. Du henter informationen via et simpelt HTTP GET:
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/changed/company/2016-06-09T11:31:00
+								curl https://rest.cvrapi.dk/v1/dk/changed/company/2016-06-09T11:31:00
 							</code>
 						</p>
 

@@ -47,11 +47,6 @@
 
 			<div class="row">
 				<div class="col-sm-10">
-					<a href="http://cvrapi.dk/documentation">
-						<div class="alert alert-info" role="alert">
-							This API is not yet released. Please click here to see the current API.
-						</div>
-					</a>
 					<h1 id="getting-started">Getting started</h1>
 
 					<div class="alert alert-warning" role="alert">
@@ -64,6 +59,12 @@
 						Furthermore the API will produce a meaningful HTTP response code whether an object was found or not.
 					</p>
 
+					<p>
+						<strong>
+							This API is only for paying customers.
+						</strong>
+					</p>
+
 					<br /><br />
 
 
@@ -74,9 +75,7 @@
 					</p>
 
 					<h4>
-						<a href="http://rest.cvrapi.dk" target="_blank">
-							<span class="label label-primary">http://rest.cvrapi.dk/</span>
-						</a> or <a href="https://rest.cvrapi.dk" target="_blank">
+						<a href="https://rest.cvrapi.dk" target="_blank">
 							<span class="label label-primary">https://rest.cvrapi.dk/</span>
 						</a>
 					</h4>
@@ -90,7 +89,7 @@
 						As previously mentioned it is not a requirement to authenticate to use the API, but you may be subject to throttling. To circumvent throttling you can authenticate via HTTP basic.
 
 						<code>
-							curl --user 'token:' http://rest.cvrapi.dk
+							curl --user 'token:' https://rest.cvrapi.dk
 						</code>
 					</p>
 
@@ -209,6 +208,10 @@
 						<li><a href="#suggest-participant-example">Suggest participants</a></li>
 						<li><a href="#retrieve-changed-companies-example">Get last changed companies</a></li>
 					</ul>
+					<br />
+					<ul class="nav">
+						<li><a href="/en/segment"><strong>Segment API</strong></a></li>
+					</ul>
 				</div>
 			</div>
 
@@ -239,7 +242,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/company/10150817
+								curl https://rest.cvrapi.dk/v1/dk/company/10150817
 							</code>
 						</p>
 
@@ -272,7 +275,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/subsidiary/1003407806
+								curl https://rest.cvrapi.dk/v1/dk/subsidiary/1003407806
 							</code>
 						</p>
 
@@ -305,7 +308,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/participant/4004213460
+								curl https://rest.cvrapi.dk/v1/dk/participant/4004213460
 							</code>
 						</p>
 
@@ -338,7 +341,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/suggestions/company/erhvervsstyrelsen
+								curl https://rest.cvrapi.dk/v1/dk/suggestions/company/erhvervsstyrelsen
 							</code>
 						</p>
 
@@ -371,7 +374,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/suggestions/subsidiary/erhvervsstyrelsen
+								curl https://rest.cvrapi.dk/v1/dk/suggestions/subsidiary/erhvervsstyrelsen
 							</code>
 						</p>
 
@@ -404,7 +407,7 @@
 							</div>
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/suggestions/participant/DEN%20DANSKE%20STAT
+								curl https://rest.cvrapi.dk/v1/dk/suggestions/participant/DEN%20DANSKE%20STAT
 							</code>
 						</p>
 
@@ -426,7 +429,7 @@
 							You will be supplied with a list of recently changed companies, from the timestamp you enter. The timestamp can not exceed 7 days in the past - also applies to the time. You get the information via a simple HTTP GET:
 
 							<code>
-								curl http://rest.cvrapi.dk/v1/dk/changed/company/2016-06-09T11:31:00
+								curl https://rest.cvrapi.dk/v1/dk/changed/company/2016-06-09T11:31:00
 							</code>
 						</p>
 
