@@ -30,7 +30,7 @@ jQuery(document).ready(function()
 		jQuery.ajax
 		({
 			async: true,
-			url: 'http://rest.cvrapi.dk/v1/dk/company/' + jQuery("[id='retrieve-company-example'] input").val(),
+			url: 'https://rest.cvrapi.dk/v1/dk/company/' + jQuery("[id='retrieve-company-example'] input").val(),
 			success: function(b)
 			{
 				jQuery("[id='retrieve-company-example'] pre code").each(function(i, block)
@@ -47,7 +47,7 @@ jQuery(document).ready(function()
 		jQuery.ajax
 		({
 			async: true,
-			url: 'http://rest.cvrapi.dk/v1/dk/subsidiary/' + jQuery("[id='retrieve-subsidiary-example'] input").val(),
+			url: 'https://rest.cvrapi.dk/v1/dk/subsidiary/' + jQuery("[id='retrieve-subsidiary-example'] input").val(),
 			success: function(b)
 			{
 				jQuery("[id='retrieve-subsidiary-example'] pre code").each(function(i, block)
@@ -64,7 +64,7 @@ jQuery(document).ready(function()
 		jQuery.ajax
 		({
 			async: true,
-			url: 'http://rest.cvrapi.dk/v1/dk/participant/' + jQuery("[id='retrieve-participant-example'] input").val(),
+			url: 'https://rest.cvrapi.dk/v1/dk/participant/' + jQuery("[id='retrieve-participant-example'] input").val(),
 			success: function(b)
 			{
 				jQuery("[id='retrieve-participant-example'] pre code").each(function(i, block)
@@ -83,7 +83,7 @@ jQuery(document).ready(function()
 		jQuery.ajax
 		({
 			async: true,
-			url: 'http://rest.cvrapi.dk/v1/dk/suggestions/company/' + jQuery("[id='suggest-company-example'] input").val(),
+			url: 'https://rest.cvrapi.dk/v1/dk/suggestions/company/' + jQuery("[id='suggest-company-example'] input").val(),
 			success: function(b)
 			{
 				console.log(b);
@@ -101,7 +101,7 @@ jQuery(document).ready(function()
 		jQuery.ajax
 		({
 			async: true,
-			url: 'http://rest.cvrapi.dk/v1/dk/suggestions/subsidiary/' + jQuery("[id='suggest-subsidiary-example'] input").val(),
+			url: 'https://rest.cvrapi.dk/v1/dk/suggestions/subsidiary/' + jQuery("[id='suggest-subsidiary-example'] input").val(),
 			success: function(b)
 			{
 				console.log(b);
@@ -119,7 +119,7 @@ jQuery(document).ready(function()
 		jQuery.ajax
 		({
 			async: true,
-			url: 'http://rest.cvrapi.dk/v1/dk/suggestions/participant/' + jQuery("[id='suggest-participant-example'] input").val(),
+			url: 'https://rest.cvrapi.dk/v1/dk/suggestions/participant/' + jQuery("[id='suggest-participant-example'] input").val(),
 			success: function(b)
 			{
 				console.log(b);
